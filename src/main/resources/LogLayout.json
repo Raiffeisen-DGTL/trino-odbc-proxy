@@ -1,0 +1,34 @@
+{
+  "application": "Trino Arrow Flight Proxy Server",
+  "instant": {
+    "$resolver": "timestamp",
+    "pattern": {
+      "format": "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+      "timezone": "UTC"
+    }
+  },
+  "thread": {
+    "$resolver": "thread",
+    "field": "name"
+  },
+  "logger": {
+    "$resolver": "logger",
+    "field": "name"
+  },
+  "level": {
+    "$resolver": "level",
+    "field": "name"
+  },
+  "event": {
+    "$resolver": "mdc",
+    "key": "ctx.event"
+  },
+  "user": {
+    "$resolver": "mdc",
+    "key": "ctx.user"
+  },
+  "message": {
+    "$resolver": "message",
+    "stringified": false
+  }
+}
